@@ -32,7 +32,6 @@ import java.util.regex.Pattern;
 public class JpKanjiFrecuency{
 
 	 private String REGEXKANJI = "[\\u4e00-\\u9faf]|[\\u3400-\\u4dbf]";
-	 private String REGEXHIRA_KATA = "([\\u3040-\\u30ff]*)";
 
 	 private List<String> RawKanjis;
 	 private List<KanjiFrecuency> encapsulatedKanji;
@@ -56,7 +55,7 @@ public class JpKanjiFrecuency{
 	 	 StringBuilder stringBuilder = new StringBuilder();
 	 	 for(int i = 0; i < text.length(); i = text.offsetByCodePoints(i, 1)){
 	 	 	 String word = new String(Character.toChars(text.codePointAt(i)));
-	 	 	 if(checkregex(REGEXKANJI, word) && checkregex(REGEXHIRA_KATA, word)){
+	 	 	 if(checkregex(REGEXKANJI, word)){
 	 	 	 	stringBuilder.append(word);
 			 }
 		 }
