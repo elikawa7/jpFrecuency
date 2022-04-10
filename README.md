@@ -29,5 +29,5 @@ This library allows you to do a simple Kanji frecuency list.
 
 ## Authors
 
-- [@elikawa7 (https://www.github.com/elikawa7)
+- [@elikawa7] (https://www.github.com/elikawa7)
 
