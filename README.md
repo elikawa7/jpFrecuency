@@ -1,6 +1,6 @@
 # JpKanjiFrecuency
 
-This library allows you to do a simple Kanji frecuency list. 
+This library allows you to do a simple Kanji/han frecuency list. 
 
 
 
@@ -24,6 +24,10 @@ This library allows you to do a simple Kanji frecuency list.
 		  List<KanjiFrecuency> kanjiFrecuencies = jp.getKanjiFrecuencyList();
 	 	 
 	 	 //do stuff with the kanjis
+		 
+		 /*result expected:
+		 	言 == 2 
+			*/
 ```
 
 
