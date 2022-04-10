@@ -1,6 +1,6 @@
 # JpKanjiFrecuency
 
-This library allows you to do a simple Kanji frecuency. 
+This library allows you to do a simple Kanji frecuency list. 
 
 
 
