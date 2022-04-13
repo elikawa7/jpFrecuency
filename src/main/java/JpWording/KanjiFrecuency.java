@@ -25,14 +25,13 @@
  * SOFTWARE.
  */
 
-package KanjiFrecuency;
+package JpWording;
 
 import java.util.Objects;
 
-public class KanjiFrecuency {
+public class KanjiFrecuency extends FrecuencyWordBase{
 
 	 private String kanji;
-	 private int frecuency;
 
 	 public KanjiFrecuency(){
 
@@ -40,7 +39,7 @@ public class KanjiFrecuency {
 
 	 public KanjiFrecuency(String kanji, int frecuency) {
 		  this.kanji = kanji;
-		  this.frecuency = frecuency;
+		  super.setFrecuency(frecuency);
 	 }
 
 	 public String getKanji() {
@@ -49,14 +48,6 @@ public class KanjiFrecuency {
 
 	 public void setKanji(String kanji) {
 		  this.kanji = kanji;
-	 }
-
-	 public int getFrecuency() {
-		  return frecuency;
-	 }
-
-	 public void setFrecuency(int frecuency) {
-		  this.frecuency = frecuency;
 	 }
 
 	 @Override
@@ -75,6 +66,6 @@ public class KanjiFrecuency {
 
 	 @Override
 	 public String toString() {
-		  return this.kanji + " = "+this.frecuency;
+		  return this.kanji + " = "+super.getFrecuency();
 	 }
 }
