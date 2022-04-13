@@ -5,7 +5,7 @@ by the way, I'm just a novice, and i'm learning on the fly so if you can point o
 This is a personal project to solve my needs in my learning process of the japanese language. And improve my coding skills at the same time. 
 
 
-##To do list
+## To do list
     -Make the code works -- DONE
     -Learn pattern designs and good practices -- In process
     -Improve the code -- Not yet
