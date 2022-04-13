@@ -1,6 +1,7 @@
 # JpKanjiFrecuency
 
 This library allows you to do a simple Kanji/han frecuency list. 
+by the way, I'm just a novice, so if you can point out where i'm making mistakes and how can i improve the code. i'll be happy :3
 
 
 
@@ -34,4 +35,5 @@ This library allows you to do a simple Kanji/han frecuency list.
 ## Authors
 
 - [@elikawa7] (https://www.github.com/elikawa7)
+
 
