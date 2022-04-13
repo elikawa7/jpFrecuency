@@ -25,7 +25,8 @@
  * SOFTWARE.
  */
 
-package KanjiFrecuency;
+package JpWording;
+
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -40,7 +41,6 @@ public class JpKanjiFrecuency{
 	 	 this.RawKanjis = new ArrayList<>();
 	 	 this.encapsulatedKanji = new ArrayList<>();
 	 }
-
 	 private List<String> putStringintoList(String mixedtext){
 		  List<String> result = new ArrayList<>();
 		  for(int i = 0; i < mixedtext.length(); i = mixedtext.offsetByCodePoints(i, 1)){
@@ -49,8 +49,6 @@ public class JpKanjiFrecuency{
 		  }
 		  return result;
 	 }
-
-
 	 private  String getKanjiFilteredfromAString(String text){
 	 	 StringBuilder stringBuilder = new StringBuilder();
 	 	 for(int i = 0; i < text.length(); i = text.offsetByCodePoints(i, 1)){
@@ -61,20 +59,17 @@ public class JpKanjiFrecuency{
 		 }
 		 return stringBuilder.toString();
 	 }
-
 	 public void addKanjiFromString(String text_with_kanji){
 	 	 StringBuilder str = new StringBuilder();
 	 	 str.append(this.getKanjiFilteredfromAString(text_with_kanji));
 	 	 this.RawKanjis.addAll(this.putStringintoList(str.toString()));
 	 }
-
 	 public void doFrecuency(){
 	 	 this.encapsulatedKanji.addAll(this.getKanjiFrecuencyList(this.RawKanjis));
 	 }
 	 public void doSorting(){
-	 	 this.encapsulatedKanji.sort(new DefaultKanjiFrecuencyComparator());
+	 	 this.encapsulatedKanji.sort(new DefaultFrecuencyComparator());
 	 }
-
 	 public void doSorting(Comparator<KanjiFrecuency> comparator){
 	 	 if(!Objects.isNull(comparator)) {
 			  this.encapsulatedKanji.sort(comparator);
@@ -97,13 +92,16 @@ public class JpKanjiFrecuency{
 		  }
 		  return frecuencies;
 	 }
-
 	 private boolean checkregex(String check, String str){
 	 	 return Pattern.compile(check).matcher(str).find();
 	 }
 
 	 public List<KanjiFrecuency> getKanjiFrecuencyList(){
 	 	 return this.encapsulatedKanji;
+	 }
+
+	 public List<String> getRawKanjiList(){
+	 	 return this.RawKanjis;
 	 }
 }
 
