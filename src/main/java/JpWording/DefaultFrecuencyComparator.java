@@ -22,12 +22,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package KanjiFrecuency;
+package JpWording;
+
 import java.util.Comparator;
 
-public class DefaultKanjiFrecuencyComparator implements Comparator<KanjiFrecuency> {
+public class DefaultFrecuencyComparator<T extends FrecuencyWordBase> implements Comparator<T> {
 	 @Override
-	 public int compare(KanjiFrecuency o1, KanjiFrecuency o2) {
+	 public int compare(T o1, T o2) {
 	 	 if(o1.getFrecuency()>o2.getFrecuency()){
 	 	 	 return -1;
 		 }else if(o1.getFrecuency()< o2.getFrecuency()){
