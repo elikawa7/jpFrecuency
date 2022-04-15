@@ -107,6 +107,7 @@ public class JpWordFrecuency {
 	 }
 
 
+
 	 public List<JpToken> getFrecuencyTokens(){
 	 	 return this.jpTokens;
 	 }

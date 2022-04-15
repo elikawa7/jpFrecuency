@@ -31,14 +31,24 @@ import java.util.Objects;
 public class JpToken  extends FrecuencyWordBase{
 	private Token token;
 	private String word;
-
+	private int weigh;
 
 	public JpToken(){
 
 	}
-	public JpToken(Token tok){
+
+	 public int getWeigh() {
+		  return weigh;
+	 }
+
+	 public void setWeigh(int weigh) {
+		  this.weigh = weigh;
+	 }
+
+	 public JpToken(Token tok){
 		 this.token = tok;
 		 this.word = tok.getSurface();
+
 	}
 
 	 public Token getToken() {
